@@ -1,0 +1,200 @@
+* {
+    padding: 0;
+    margin: 0;    
+}
+
+$logoFont: 'Revalia';
+$mainFont: 'Roboto';
+$textShadowBlue: rgba(0, 184, 240, 1) 0px 1.5px;
+$textShadowBlueHover: rgba(0, 184, 240, 1) 1.5px 1.5px;
+.content {
+    .header {
+        padding-bottom: 15px;
+        padding-top: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(46, 46, 46, 1);
+        color: white;
+        &-logo {
+            font-family: $logoFont;
+            font-size: 25px;
+            img, span {
+                display: block;
+                padding: 0;
+                margin: 0 auto;
+            }
+            img {
+                width: 41px;
+            }
+            .text {
+                text-shadow: $textShadowBlue;
+            }
+        }
+        &-search {
+            font-family: $mainFont;
+            display: flex;
+            align-items: flex-end;
+            padding-right: 20px;
+            img {
+                width: 22px;
+            }
+            input {
+                max-width: 130px;
+                color: white;
+                margin-left: 10px;
+                font-size: 22px;
+                border: none;
+                background-color: transparent;
+                border-bottom: 1.5px solid white;
+            }
+            
+            
+        }
+        @media screen and (max-width: 640px) {
+            &-search {
+                display: none;
+            }
+            &-logo {
+                img {
+                    margin-top: -15px;
+                }
+                   
+            }
+            justify-content: space-around;
+            
+        }
+        
+        
+        &-linkToLogin {
+            
+            font-family: $mainFont;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .cart, .account {
+                font-weight: 500;
+                margin-left: 20px;
+                margin-right: 20px;
+                &-img {
+                    padding-bottom: -20px;
+                }
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                img, span {
+                    width: 50px;
+                    text-align: center;
+                    display: block;
+                    margin: 0 auto;
+
+                }
+
+            }
+            
+        }
+        @media screen and (max-width: 420px) {
+            .cart, .account {
+                padding: 0;
+                margin: 0;
+            }
+        }
+       
+    }
+    .subheader {
+        font-family: $mainFont;
+        background-color: rgba(33, 33, 33, 1);
+        text-align: center;
+        ul {
+            li {
+                cursor: pointer;
+                color: white;
+                padding: 5px;
+                display: inline-block;
+                font-size: 20px;
+                font-weight: bold;
+                &:hover {
+                    text-shadow: $textShadowBlueHover;
+                    transition: 0.1s;
+                }
+            }
+        }
+    }
+    .splide {
+        text-align: center;
+    }
+    .clothes {       
+        text-align: center;
+        .line {
+            
+            padding-top: 30px;
+            width: 95%;
+            margin: 0 auto;
+            border-bottom: 2px solid black;
+        }
+    .collection {
+        padding-top: 30px;
+        font-family: $mainFont;
+        display: flex;
+        flex-direction: column;
+        &-clothes {
+            padding-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            @media screen and (max-width: 1560px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            @media screen and (max-width: 780px) {
+                grid-template-columns: repeat(1, 1fr);
+            }
+            
+            .item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                span {
+                    padding: 15px;
+                }
+                img {
+                    cursor: pointer;
+                    max-width: 360px;
+                    &:hover {
+                        transition: 0.3s;
+                        box-shadow: -7px -7px rgba(0, 184, 240, 1);
+                    }
+                }
+                
+            }
+            
+        }
+        @media screen and (max-width: 373px) {
+            &-clothes {
+                .item {
+                    img {
+                        max-width: 250px;
+                    }
+                }
+            }
+        }
+    }
+    }
+    .footer {
+        margin-top: 40px;
+        padding-top: 20px;
+        padding-bottom: 15px;
+        font-family: $mainFont;
+        font-weight: bold;
+        color: white;
+        background-color: rgba(46, 46, 46, 1);
+        .aboutUs {
+            text-align: center;
+            img {
+                cursor: pointer;
+                margin-top: 10px;
+                width: 40px;
+            }
+            
+        }
+    }
+}
+

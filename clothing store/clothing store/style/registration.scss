@@ -1,0 +1,250 @@
+* {
+    padding: 0;
+    margin: 0;    
+}
+
+$logoFont: 'Revalia';
+$mainFont: 'Roboto';
+$textShadowBlue: rgba(0, 184, 240, 1) 0px 1.5px;
+$textShadowBlueHover: rgba(0, 184, 240, 1) 1.5px 1.5px;
+.content {
+    .header {
+        padding-bottom: 15px;
+        padding-top: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(46, 46, 46, 1);
+        color: white;
+        &-logo {
+            font-family: $logoFont;
+            font-size: 25px;
+            img, span {
+                display: block;
+                padding: 0;
+                margin: 0 auto;
+            }
+            img {
+                width: 41px;
+            }
+            .text {
+                text-shadow: $textShadowBlue;
+            }
+        }
+        &-search {
+            font-family: $mainFont;
+            display: flex;
+            align-items: flex-end;
+            padding-right: 20px;
+            img {
+                width: 22px;
+            }
+            input {
+                max-width: 130px;
+                color: white;
+                margin-left: 10px;
+                font-size: 22px;
+                border: none;
+                background-color: transparent;
+                border-bottom: 1.5px solid white;
+            }
+            
+            
+        }
+        @media screen and (max-width: 640px) {
+            &-search {
+                display: none;
+            }
+            &-logo {
+                img {
+                    margin-top: -15px;
+                }
+                   
+            }
+            justify-content: space-around;
+            
+        }
+        
+        
+        &-linkToLogin {
+            
+            font-family: $mainFont;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .cart, .account {
+                font-weight: 500;
+                margin-left: 20px;
+                margin-right: 20px;
+                &-img {
+                    padding-bottom: -20px;
+                }
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                img, span {
+                    width: 50px;
+                    text-align: center;
+                    display: block;
+                    margin: 0 auto;
+
+                }
+
+            }
+            
+        }
+        @media screen and (max-width: 420px) {
+            .cart, .account {
+                padding: 0;
+                margin: 0;
+            }
+        }
+       
+    }
+    .subheader {
+        font-family: $mainFont;
+        background-color: rgba(33, 33, 33, 1);
+        text-align: center;
+        ul {
+            li {
+                cursor: pointer;
+                color: white;
+                padding: 5px;
+                display: inline-block;
+                font-size: 20px;
+                font-weight: bold;
+                &:hover {
+                    text-shadow: $textShadowBlueHover;
+                    transition: 0.1s;
+                }
+            }
+        }
+    }
+    .authorization {
+        margin-top: 140px;
+        @media screen and(max-width: 700px){
+            margin-top: 20px;
+        }
+        font-family: $mainFont;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%;
+        justify-content: space-evenly;
+        .signIn{
+            margin: 20px;
+            h2 {
+                opacity: 80%;
+                margin-bottom: 120px;
+                @media screen and(max-width: 700px){
+                    margin-bottom: 20px;
+                }
+            }
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            input {
+                border: none;
+                border-bottom: 2px solid rgba(0, 0, 0, 0.7);
+                font-size: 25px;
+                opacity: 80%;
+            }
+            .signBtn {
+                padding: 10px;
+                margin-top: 30px;
+                font-size: 25px;
+                border: none;
+                color: white;
+                font-weight: bold;
+                background-color: black;
+                cursor: pointer;
+                transition: 0.2s;
+                &:hover {
+                    opacity: 80%;
+                    transition: 0.2s;
+                }
+            }
+            .forgotPasswordWrapper {
+                margin-top: 15px;
+                opacity: 70%;
+                
+            }
+            .forgotPassword {
+                border-bottom: 2px solid rgba(0, 0, 0, 0.7);
+                cursor: pointer;
+            }
+            .loginWithFacebook, .loginWithVkontakte {
+                img {
+                    padding-right: 3px;
+                }
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10px;
+                margin-top: 10px;
+                font-size: 25px;
+                border: none;
+                color: white;
+                font-weight: bold;
+                background-color: rgba(53, 86, 96, 1);
+                cursor: pointer;
+                transition: 0.2s;
+                &:hover {
+                    opacity: 90%;
+                    transition: 0.2s;
+                }
+            }
+            
+        }
+        .signUp {
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            h2 {
+                opacity: 80%;
+                margin-bottom: 50px;
+                @media screen and(max-width: 700px){
+                    margin-bottom: 10px;
+                }
+            }
+            button {
+                padding: 10px;
+                margin-top: 30px;
+                font-size: 25px;
+                border: none;
+                color: black;
+                background-color: transparent;
+                font-weight: bold;
+                border: 2px solid black;
+                cursor: pointer;
+                transition: 0.2s;
+                &:hover {
+                    background-color: black;
+                    color: white;
+                    transition: 0.2s;
+                }
+            }
+            &-advantage {
+                margin-top: 25px;
+                text-align: start;
+                ul {
+                    li {
+                        display: flex;
+                        align-items: center;
+                        img {
+                            padding-right: 5px;
+                            width: 25px;
+                        }
+                        margin-top: 10px;
+                    }
+                    list-style-type: none;
+                    
+                }
+            }
+        }
+    }
+    
+    
+}
+
