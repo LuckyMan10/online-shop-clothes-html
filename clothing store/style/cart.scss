@@ -1,0 +1,363 @@
+* {
+    padding: 0;
+    margin: 0;    
+}
+
+$logoFont: 'Revalia';
+$mainFont: 'Roboto';
+$textShadowBlue: rgba(0, 184, 240, 1) 0px 1.5px;
+$textShadowBlueHover: rgba(0, 184, 240, 1) 1.5px 1.5px;
+.content {
+    .header {
+        padding-bottom: 15px;
+        padding-top: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(46, 46, 46, 1);
+        color: white;
+        &-logo {
+            font-family: $logoFont;
+            font-size: 25px;
+            img, span {
+                display: block;
+                padding: 0;
+                margin: 0 auto;
+            }
+            img {
+                width: 41px;
+            }
+            .text {
+                text-shadow: $textShadowBlue;
+            }
+        }
+        &-search {
+            font-family: $mainFont;
+            display: flex;
+            align-items: flex-end;
+            padding-right: 20px;
+            img {
+                width: 22px;
+            }
+            input {
+                max-width: 130px;
+                color: white;
+                margin-left: 10px;
+                font-size: 22px;
+                border: none;
+                background-color: transparent;
+                border-bottom: 1.5px solid white;
+            }
+            
+            
+        }
+        @media screen and (max-width: 640px) {
+            &-search {
+                display: none;
+            }
+            &-logo {
+                img {
+                    margin-top: -15px;
+                }
+                   
+            }
+            justify-content: space-around;
+            
+        }
+        
+        
+        &-linkToLogin {
+            
+            font-family: $mainFont;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .cart, .account {
+                font-weight: 500;
+                margin-left: 20px;
+                margin-right: 20px;
+                &-img {
+                    padding-bottom: -20px;
+                }
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                img, span {
+                    width: 50px;
+                    text-align: center;
+                    display: block;
+                    margin: 0 auto;
+
+                }
+
+            }
+            
+        }
+        @media screen and (max-width: 420px) {
+            .cart, .account {
+                padding: 0;
+                margin: 0;
+            }
+        }
+       
+    }
+    .subheader {
+        font-family: $mainFont;
+        background-color: rgba(33, 33, 33, 1);
+        text-align: center;
+        ul {
+            li {
+                cursor: pointer;
+                color: white;
+                padding: 5px;
+                display: inline-block;
+                font-size: 20px;
+                font-weight: bold;
+                &:hover {
+                    text-shadow: $textShadowBlueHover;
+                    transition: 0.1s;
+                }
+            }
+        }
+    }
+    
+    .cart {
+        font-family: $mainFont;
+        .wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: space-around;
+        }
+        .clothesItems {
+            padding: 35px;
+            &-header {
+                margin-bottom: 25px;
+                display: flex;
+                font-size: 40px;
+                align-items: center;
+                span {
+                    padding: 2px;
+                    background-color: rgba(231, 231, 231, 1);
+                }
+                h3 {
+                    margin-right: 15px;
+                }
+            }
+            &-items {
+                
+                .item {            
+                    margin: 25px 0px 25px 0px;
+                    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                    display: flex;
+                    &-image{
+                   
+                        img {
+                            width: 250px;
+                            height: 100%;
+                            @media screen and (max-width: 830px){
+                                width: 180px;
+                            }
+                            @media screen and (max-width: 550px){
+                                width: 130px;
+                            }
+                        }
+                    }
+                    &-information {
+                        padding: 25px;
+                        width: 500px;
+                        @media screen and (max-width: 830px){
+                            width: 400px;
+                        }
+                        @media screen and (max-width: 830px){
+                            width: 300px;
+                            padding: 10px;
+                        }
+                        @media screen and (max-width: 550px){
+                            width: 200px;
+                            padding: 10px;
+                        }
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        .wrapperTop {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            .description {
+                                span {
+                                    display: block;
+                                    &:nth-child(1) {
+                                 
+                                        font-size: 35px;
+                                        font-weight: 600;
+                                        @media screen and (max-width: 550px){
+                                            font-size: 23px;
+                                        }
+                                    }
+                                    &:nth-child(2) {
+                                        opacity: 60%;
+                                    }
+                                }
+                               
+                            }
+                            .clearItem button{
+                                background-color: transparent;
+                                border: none;
+                                cursor: pointer;
+                            }
+                        }
+                        .wrapperBottom {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            .pcsItem input{
+                                font-size: 25px;
+                                width: 55px;
+                                height: 35px;
+                            }
+                            .price {
+                                font-size: 50px;
+                                
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .payment {
+                padding: 20px;
+                @media screen and (max-width: 560px) {
+                    padding: 10px;
+                }
+                display: flex;
+                flex-direction: column;          
+                span {
+                    font-size: 35px;
+                    @media screen and (max-width: 560px) {
+                        font-size: 25px;
+                    }
+                    opacity: 80%;
+                }
+                .paymentPrice {
+                    display: flex;
+                    justify-content: space-between;
+                &-wrapper_1 {
+                    span {
+                        display: block;
+                        &:nth-child(3) {
+                            margin: 25px 0px 25px 0px;
+                            font-size: 45px;
+                            @media screen and (max-width: 560px) {
+                                font-size: 25px;
+                            }
+                        }
+                    }
+                }
+                &-wrapper_2 {
+                    span {
+                        text-align: end;
+                        display: block;
+                        &:nth-child(3) {
+                            margin: 25px 0px 25px 0px;
+                            font-size: 45px;
+                        }
+                    }
+                }
+                }
+                .buyBtn {
+                    cursor: pointer;
+                    opacity: 80%;
+                    padding: 10px;
+                    font-size: 35px;
+                    @media screen and (max-width: 560px) {
+                        font-size: 25px;
+                    }
+                    font-weight: 500;
+                    background-color: black;
+                    border: none;
+                    color: white;
+                    &:hover {
+                        opacity: 95%;
+                    }
+                }
+                .promoCode {
+                    margin-top: 100px;
+                   
+                    span {
+                        opacity: 75%;
+                        display: block;
+                        margin-bottom: 30px;
+                        font-size: 20px;
+                        font-weight: 600;
+                    }
+                    &-input {
+                        display: flex;
+                        align-items: flex-end;
+                        
+                        opacity: 75%;
+                        input {
+                            padding: 5px;
+                            margin-right: 20px;
+                            border: none;
+                            border-bottom: 1px solid black;
+                            font-size: 30px;
+                            @media screen and (max-width: 560px) {
+                                font-size: 20px;
+                            }
+                            @media screen and (max-width: 560px) {
+                                font-size: 15px;
+                            }
+                        }
+                        button {
+                            border: 2px solid black;
+                            cursor: pointer;
+                            background-color: transparent;
+                            font-size: 20px;
+                            padding: 2px 7px 2px 7px;
+                            &:hover {
+                                background-color: black;
+                                color: white;
+                            }
+                        }
+                    }
+                }
+                .paymentMethods {
+                    margin-top: 100px;
+                    span {
+                        display: block;
+                        
+                        font-size: 20px;
+                        margin-bottom: 20px;
+                        font-weight: 500;
+                        opacity: 75%;
+                    }
+                    &-cards {
+                        display: flex;
+                        align-items: center;
+                        img {
+                            padding: 3px;
+                            max-width: 100px;
+                        }
+                    }
+                    &-cash {
+                        opacity: 70%;
+                        display: flex;
+                        align-items: center;
+                        
+                        img {
+                            max-width: 30px;
+                        }
+                        span {
+                            margin: 0;
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+

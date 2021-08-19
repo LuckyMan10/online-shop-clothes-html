@@ -1,0 +1,231 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.content .header {
+  padding-bottom: 15px;
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2e2e2e;
+  color: white;
+}
+.content .header-logo {
+  font-family: "Revalia";
+  font-size: 25px;
+}
+.content .header-logo img, .content .header-logo span {
+  display: block;
+  padding: 0;
+  margin: 0 auto;
+}
+.content .header-logo img {
+  width: 41px;
+}
+.content .header-logo .text {
+  text-shadow: #00b8f0 0px 1.5px;
+}
+.content .header-search {
+  font-family: "Roboto";
+  display: flex;
+  align-items: flex-end;
+  padding-right: 20px;
+}
+.content .header-search img {
+  width: 22px;
+}
+.content .header-search input {
+  max-width: 130px;
+  color: white;
+  margin-left: 10px;
+  font-size: 22px;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1.5px solid white;
+}
+@media screen and (max-width: 640px) {
+  .content .header {
+    justify-content: space-around;
+  }
+  .content .header-search {
+    display: none;
+  }
+  .content .header-logo img {
+    margin-top: -15px;
+  }
+}
+.content .header-linkToLogin {
+  font-family: "Roboto";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content .header-linkToLogin .cart, .content .header-linkToLogin .account {
+  font-weight: 500;
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.content .header-linkToLogin .cart-img, .content .header-linkToLogin .account-img {
+  padding-bottom: -20px;
+}
+.content .header-linkToLogin .cart img, .content .header-linkToLogin .cart span, .content .header-linkToLogin .account img, .content .header-linkToLogin .account span {
+  width: 50px;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+@media screen and (max-width: 420px) {
+  .content .header .cart, .content .header .account {
+    padding: 0;
+    margin: 0;
+  }
+}
+.content .subheader {
+  font-family: "Roboto";
+  background-color: #212121;
+  text-align: center;
+}
+.content .subheader ul li {
+  cursor: pointer;
+  color: white;
+  padding: 5px;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+}
+.content .subheader ul li:hover {
+  text-shadow: #00b8f0 1.5px 1.5px;
+  transition: 0.1s;
+}
+.content .authorization {
+  margin-top: 140px;
+  font-family: "Roboto";
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  justify-content: space-evenly;
+}
+@media screen and (max-width: 700px) {
+  .content .authorization {
+    margin-top: 20px;
+  }
+}
+.content .authorization .signIn {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.content .authorization .signIn h2 {
+  opacity: 80%;
+  margin-bottom: 120px;
+}
+@media screen and (max-width: 700px) {
+  .content .authorization .signIn h2 {
+    margin-bottom: 20px;
+  }
+}
+.content .authorization .signIn input {
+  border: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.7);
+  font-size: 25px;
+  opacity: 80%;
+}
+.content .authorization .signIn .signBtn {
+  padding: 10px;
+  margin-top: 30px;
+  font-size: 25px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  background-color: black;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.content .authorization .signIn .signBtn:hover {
+  opacity: 80%;
+  transition: 0.2s;
+}
+.content .authorization .signIn .forgotPasswordWrapper {
+  margin-top: 15px;
+  opacity: 70%;
+}
+.content .authorization .signIn .forgotPassword {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+}
+.content .authorization .signIn .loginWithFacebook, .content .authorization .signIn .loginWithVkontakte {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 25px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  background-color: #355660;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.content .authorization .signIn .loginWithFacebook img, .content .authorization .signIn .loginWithVkontakte img {
+  padding-right: 3px;
+}
+.content .authorization .signIn .loginWithFacebook:hover, .content .authorization .signIn .loginWithVkontakte:hover {
+  opacity: 90%;
+  transition: 0.2s;
+}
+.content .authorization .signUp {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.content .authorization .signUp h2 {
+  opacity: 80%;
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 700px) {
+  .content .authorization .signUp h2 {
+    margin-bottom: 10px;
+  }
+}
+.content .authorization .signUp button {
+  padding: 10px;
+  margin-top: 30px;
+  font-size: 25px;
+  border: none;
+  color: black;
+  background-color: transparent;
+  font-weight: bold;
+  border: 2px solid black;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.content .authorization .signUp button:hover {
+  background-color: black;
+  color: white;
+  transition: 0.2s;
+}
+.content .authorization .signUp-advantage {
+  margin-top: 25px;
+  text-align: start;
+}
+.content .authorization .signUp-advantage ul {
+  list-style-type: none;
+}
+.content .authorization .signUp-advantage ul li {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+.content .authorization .signUp-advantage ul li img {
+  padding-right: 5px;
+  width: 25px;
+}/*# sourceMappingURL=registration.css.map */

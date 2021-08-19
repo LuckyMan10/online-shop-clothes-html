@@ -1,0 +1,345 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.content .header {
+  padding-bottom: 15px;
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2e2e2e;
+  color: white;
+}
+.content .header-logo {
+  font-family: "Revalia";
+  font-size: 25px;
+}
+.content .header-logo img, .content .header-logo span {
+  display: block;
+  padding: 0;
+  margin: 0 auto;
+}
+.content .header-logo img {
+  width: 41px;
+}
+.content .header-logo .text {
+  text-shadow: #00b8f0 0px 1.5px;
+}
+.content .header-search {
+  font-family: "Roboto";
+  display: flex;
+  align-items: flex-end;
+  padding-right: 20px;
+}
+.content .header-search img {
+  width: 22px;
+}
+.content .header-search input {
+  max-width: 130px;
+  color: white;
+  margin-left: 10px;
+  font-size: 22px;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1.5px solid white;
+}
+@media screen and (max-width: 640px) {
+  .content .header {
+    justify-content: space-around;
+  }
+  .content .header-search {
+    display: none;
+  }
+  .content .header-logo img {
+    margin-top: -15px;
+  }
+}
+.content .header-linkToLogin {
+  font-family: "Roboto";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content .header-linkToLogin .cart, .content .header-linkToLogin .account {
+  font-weight: 500;
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.content .header-linkToLogin .cart-img, .content .header-linkToLogin .account-img {
+  padding-bottom: -20px;
+}
+.content .header-linkToLogin .cart img, .content .header-linkToLogin .cart span, .content .header-linkToLogin .account img, .content .header-linkToLogin .account span {
+  width: 50px;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+@media screen and (max-width: 420px) {
+  .content .header .cart, .content .header .account {
+    padding: 0;
+    margin: 0;
+  }
+}
+.content .subheader {
+  font-family: "Roboto";
+  background-color: #212121;
+  text-align: center;
+}
+.content .subheader ul li {
+  cursor: pointer;
+  color: white;
+  padding: 5px;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+}
+.content .subheader ul li:hover {
+  text-shadow: #00b8f0 1.5px 1.5px;
+  transition: 0.1s;
+}
+.content .cart {
+  font-family: "Roboto";
+}
+.content .cart .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+.content .cart .clothesItems {
+  padding: 35px;
+}
+.content .cart .clothesItems-header {
+  margin-bottom: 25px;
+  display: flex;
+  font-size: 40px;
+  align-items: center;
+}
+.content .cart .clothesItems-header span {
+  padding: 2px;
+  background-color: #e7e7e7;
+}
+.content .cart .clothesItems-header h3 {
+  margin-right: 15px;
+}
+.content .cart .clothesItems-items .item {
+  margin: 25px 0px 25px 0px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: flex;
+}
+.content .cart .clothesItems-items .item-image img {
+  width: 250px;
+  height: 100%;
+}
+@media screen and (max-width: 830px) {
+  .content .cart .clothesItems-items .item-image img {
+    width: 180px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .content .cart .clothesItems-items .item-image img {
+    width: 130px;
+  }
+}
+.content .cart .clothesItems-items .item-information {
+  padding: 25px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media screen and (max-width: 830px) {
+  .content .cart .clothesItems-items .item-information {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 830px) {
+  .content .cart .clothesItems-items .item-information {
+    width: 300px;
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .content .cart .clothesItems-items .item-information {
+    width: 200px;
+    padding: 10px;
+  }
+}
+.content .cart .clothesItems-items .item-information .wrapperTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content .cart .clothesItems-items .item-information .wrapperTop .description span {
+  display: block;
+}
+.content .cart .clothesItems-items .item-information .wrapperTop .description span:nth-child(1) {
+  font-size: 35px;
+  font-weight: 600;
+}
+@media screen and (max-width: 550px) {
+  .content .cart .clothesItems-items .item-information .wrapperTop .description span:nth-child(1) {
+    font-size: 23px;
+  }
+}
+.content .cart .clothesItems-items .item-information .wrapperTop .description span:nth-child(2) {
+  opacity: 60%;
+}
+.content .cart .clothesItems-items .item-information .wrapperTop .clearItem button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.content .cart .clothesItems-items .item-information .wrapperBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content .cart .clothesItems-items .item-information .wrapperBottom .pcsItem input {
+  font-size: 25px;
+  width: 55px;
+  height: 35px;
+}
+.content .cart .clothesItems-items .item-information .wrapperBottom .price {
+  font-size: 50px;
+  font-weight: bold;
+}
+.content .cart .clothesItems .payment {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 560px) {
+  .content .cart .clothesItems .payment {
+    padding: 10px;
+  }
+}
+.content .cart .clothesItems .payment span {
+  font-size: 35px;
+  opacity: 80%;
+}
+@media screen and (max-width: 560px) {
+  .content .cart .clothesItems .payment span {
+    font-size: 25px;
+  }
+}
+.content .cart .clothesItems .payment .paymentPrice {
+  display: flex;
+  justify-content: space-between;
+}
+.content .cart .clothesItems .payment .paymentPrice-wrapper_1 span {
+  display: block;
+}
+.content .cart .clothesItems .payment .paymentPrice-wrapper_1 span:nth-child(3) {
+  margin: 25px 0px 25px 0px;
+  font-size: 45px;
+}
+@media screen and (max-width: 560px) {
+  .content .cart .clothesItems .payment .paymentPrice-wrapper_1 span:nth-child(3) {
+    font-size: 25px;
+  }
+}
+.content .cart .clothesItems .payment .paymentPrice-wrapper_2 span {
+  text-align: end;
+  display: block;
+}
+.content .cart .clothesItems .payment .paymentPrice-wrapper_2 span:nth-child(3) {
+  margin: 25px 0px 25px 0px;
+  font-size: 45px;
+}
+.content .cart .clothesItems .payment .buyBtn {
+  cursor: pointer;
+  opacity: 80%;
+  padding: 10px;
+  font-size: 35px;
+  font-weight: 500;
+  background-color: black;
+  border: none;
+  color: white;
+}
+@media screen and (max-width: 560px) {
+  .content .cart .clothesItems .payment .buyBtn {
+    font-size: 25px;
+  }
+}
+.content .cart .clothesItems .payment .buyBtn:hover {
+  opacity: 95%;
+}
+.content .cart .clothesItems .payment .promoCode {
+  margin-top: 100px;
+}
+.content .cart .clothesItems .payment .promoCode span {
+  opacity: 75%;
+  display: block;
+  margin-bottom: 30px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.content .cart .clothesItems .payment .promoCode-input {
+  display: flex;
+  align-items: flex-end;
+  opacity: 75%;
+}
+.content .cart .clothesItems .payment .promoCode-input input {
+  padding: 5px;
+  margin-right: 20px;
+  border: none;
+  border-bottom: 1px solid black;
+  font-size: 30px;
+}
+@media screen and (max-width: 560px) {
+  .content .cart .clothesItems .payment .promoCode-input input {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .content .cart .clothesItems .payment .promoCode-input input {
+    font-size: 15px;
+  }
+}
+.content .cart .clothesItems .payment .promoCode-input button {
+  border: 2px solid black;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 20px;
+  padding: 2px 7px 2px 7px;
+}
+.content .cart .clothesItems .payment .promoCode-input button:hover {
+  background-color: black;
+  color: white;
+}
+.content .cart .clothesItems .payment .paymentMethods {
+  margin-top: 100px;
+}
+.content .cart .clothesItems .payment .paymentMethods span {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  opacity: 75%;
+}
+.content .cart .clothesItems .payment .paymentMethods-cards {
+  display: flex;
+  align-items: center;
+}
+.content .cart .clothesItems .payment .paymentMethods-cards img {
+  padding: 3px;
+  max-width: 100px;
+}
+.content .cart .clothesItems .payment .paymentMethods-cash {
+  opacity: 70%;
+  display: flex;
+  align-items: center;
+}
+.content .cart .clothesItems .payment .paymentMethods-cash img {
+  max-width: 30px;
+}
+.content .cart .clothesItems .payment .paymentMethods-cash span {
+  margin: 0;
+  font-size: 20px;
+}/*# sourceMappingURL=cart.css.map */
